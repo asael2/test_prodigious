@@ -13,29 +13,28 @@
     <script src="js/angular.js"></script>
     <script src="js/angular-animate.min.js"></script>
     <script src="js/angular-touch.min.js"></script>
-    <script src="js/app.js"></script>
-    
+    <script src="js/app.js"></script> 
 </head>
+
 <body ng-controller="MainCtrl">
     <header>
        <h1>{{albumTitle}}</h1>
     </header>
 
     <!-- slider container -->
-    <div class="container slider">
-        
+    <div class="container slider">    
         <div class="scene">
             
             <!-- prev / next controls -->
             <a class="arrow prev" href="#" ng-click="showPrev()"></a>
-            <a class="arrow next" href="#" ng-click="showNext()"></a>
+            <a class="arrow next" href="#" ng-click="showNext()" ng-keyup="count = count + 1"></a>
            
            <!-- main picture -->
-            <div class="picontainer" ng-show="vefoto"> 
-                <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.image}}" />
-            </div>
-
-           
+            <div class="picontainer">
+                <div class="picture">
+                    <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.image}}" />
+                </div> 
+            </div>      
         </div>
         
         <!-- picture descriptions -->
@@ -46,9 +45,6 @@
 
         <!-- navigation controls -->
         <ul class="nav">
-            <!-- <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
-                <img ng-src="{{photo.thumb_url}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
-            </li> -->
              <li ng-repeat="photo in photos" back-img="{{photo.thumb_url}}" ng-class="{'active':isActive($index)}" ng-click="showPhoto($index);" > </li>
         </ul>
 

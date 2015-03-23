@@ -4,7 +4,7 @@ var app = angular.module('Album', ['ngAnimate', 'ngTouch'])
 
     var albumName, albumElems, url = "js/gallery.json";
     $scope.photos = [];
-$scope.vefoto = false;
+
     // Request
     $http.get(url).success(function(data){
       $scope.albumTitle = data.album.name;
@@ -17,7 +17,6 @@ $scope.vefoto = false;
 
     // if a current image is the same as requested image
     $scope.isActive = function (index) {
-      $scope.vefoto = true;
       return $scope._Index === index;
     };
 
@@ -35,6 +34,11 @@ $scope.vefoto = false;
     $scope.showPhoto = function (index) {
       $scope._Index = index;
     };
+
+    // $scope.onKeyUp($event){
+    //   if(window.event.keyCode == 39) alert("39");
+    //   if(window.event.keyCode == 37) alert("37");
+    // }
 
 }).directive('backImg', function(){
     return function(scope, element, attrs){
