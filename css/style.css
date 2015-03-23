@@ -65,7 +65,7 @@ header{
 }
 .arrow.prev {
     background: url("../imgs/sprites.png") white no-repeat 4px -244px;
-    left: 90px;
+    left: 0;
     opacity: 0.4;
     transition: all 0.2s linear 0s;
     border: 1px solid white;
@@ -76,7 +76,7 @@ header{
 }
 .arrow.next {
       background: url("../imgs/sprites.png") white no-repeat 4px -303px;
-      right: 90px;
+      right: 0px;
       opacity: 0.4;
       transition: all 0.2s linear 0s;
       border: 1px solid white;
@@ -98,8 +98,8 @@ header{
     height: 90px;
     left: 0;
     margin: 0 auto;
-    padding: 1em 0 0.8em;
-    position: absolute;
+    padding: 1.4em 0;
+    /* position: absolute; */
     /* right: 0; */
     text-align: center;
     width: 100%;
@@ -116,6 +116,9 @@ header{
     /* margin: 0px; */
     position: relative;
     width: 90px;
+    top: 0;
+    /* float: left; */
+    vertical-align: top;
 }
 .nav li.active {
     border: 1px solid #06ABE3;
@@ -128,9 +131,9 @@ header{
 
 .slider {
     /* border-radius: 5px; */
-    min-height: 404px;
+    /* min-height: 404px; */
     margin: 20px auto;
-    position: relative;
+    /* position: relative; */
 
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
@@ -148,8 +151,10 @@ header{
 }
 .slide {
     /* position: absolute; */
-    top: 0;
-    left: 0;
+    /* top: 0; */
+    /* left: 0; */
+    height: 100%;
+    /* width: 100%; */
 }
 .slide.ng-hide-add {
     opacity:1;
@@ -185,48 +190,33 @@ header{
 }
 .slide, .slide.ng-hide-remove.ng-hide-remove-active {
     opacity:1;
+    height: 100%;
 }
 
 
-.picontainer{
-    /* border: 1px solid #FFFFFF; */   margin: 20px auto;      
-    /* min-width: 200px; */
+.picontainer{         
     text-align: center;
     overflow: hidden;
-    width: 80%;
-    display: block;
-    /* min-height: 226px; */
-    height: 402px;
+    width: 90%;
     margin: auto;
-    position: relative;
+    padding-bottom: 0%;
+    display: block;
 }
 
-.photo-tag{
-    background: red;
-    text-align: center;
+.photo-tag{    text-align: center;
     padding: 10px;
     margin: 0;
 }
 
 .scene{
     width: 100%; 
-    position: relative; 
-    /* padding-bottom: 20%; */
-    margin: auto;
+
 }
 
 .picontainer img{
-    /* width: 100%; */
-    /* height: auto; */
-    /* position: absolute; */ 
-    /* left: 0; */ 
-    /* top: 0; */ 
-    /* right: 0; */ 
-    /* bottom: 0; */
+    width: 99%;
     display: block;
     border: 1px solid #FFFFFF;
-    /* text-align: center; */
-    /* margin: auto; */
-}
+
 
 
