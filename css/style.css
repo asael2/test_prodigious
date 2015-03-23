@@ -65,24 +65,24 @@ header{
 }
 .arrow.prev {
     background: url("../imgs/sprites.png") white no-repeat 4px -244px;
-    left: 0;
+    left: -15px;
     opacity: 0.4;
     transition: all 0.2s linear 0s;
     border: 1px solid white;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 200px;
+    top: 50%;
 }
 .arrow.next {
       background: url("../imgs/sprites.png") white no-repeat 4px -303px;
-      right: 0px;
+      right: -15px;
       opacity: 0.4;
       transition: all 0.2s linear 0s;
       border: 1px solid white;
       width: 40px;
       height: 40px;
-      top: 200px;
+      top: 50%;
       position: absolute;
 }
 .arrow.prev:hover{
@@ -159,7 +159,7 @@ header{
 .slide.ng-hide-add {
     opacity:1;
 
-    -webkit-transition:1s linear all;
+/*    -webkit-transition:1s linear all;
     -moz-transition:1s linear all;
     -o-transition:1s linear all;
     transition:1s linear all;
@@ -174,16 +174,16 @@ header{
     -moz-transform-origin: right top 0;
     -ms-transform-origin: right top 0;
     -o-transform-origin: right top 0;
-    transform-origin: right top 0;
+    transform-origin: right top 0;*/
 }
 .slide.ng-hide-add.ng-hide-add-active {
     opacity:0;
 }
 .slide.ng-hide-remove {
-    -webkit-transition:1s linear all;
+/*    -webkit-transition:1s linear all;
     -moz-transition:1s linear all;
     -o-transition:1s linear all;
-    transition:1s linear all;
+    transition:1s linear all;*/
 
     display:block!important;
     opacity:0;
@@ -198,6 +198,7 @@ header{
     text-align: center;
     overflow: hidden;
     width: 90%;
+    height: auto;
     margin: auto;
     padding-bottom: 0%;
     display: block;
@@ -209,8 +210,10 @@ header{
 }
 
 .scene{
-    width: 100%; 
+    width: 60%; 
 
+    margin: auto;
+    position: relative;
 }
 
 .picontainer img{

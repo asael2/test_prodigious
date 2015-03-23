@@ -4,7 +4,7 @@ var app = angular.module('Album', ['ngAnimate', 'ngTouch'])
 
     var albumName, albumElems, url = "js/gallery.json";
     $scope.photos = [];
-
+$scope.vefoto = false;
     // Request
     $http.get(url).success(function(data){
       $scope.albumTitle = data.album.name;
@@ -17,6 +17,7 @@ var app = angular.module('Album', ['ngAnimate', 'ngTouch'])
 
     // if a current image is the same as requested image
     $scope.isActive = function (index) {
+      $scope.vefoto = true;
       return $scope._Index === index;
     };
 
